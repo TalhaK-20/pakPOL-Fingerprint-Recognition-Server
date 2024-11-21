@@ -9,7 +9,7 @@ app = Flask(__name__)
 def extract_minutiae(image_path):
     img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
 
-    # Step 1: Preprocess the image (Binarization and Thinning)
+    # Step 1: Preprocess the image (Binarization & Thinning)
     # Binarize the image using Otsu's thresholding
     _, binary_img = cv2.threshold(img, 0, 255, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU)
 
